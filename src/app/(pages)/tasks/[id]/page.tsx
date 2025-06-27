@@ -1,9 +1,10 @@
 import ViewTaskPage from "@/components/Task/ViewTask/ViewTask";
 
-interface PageProps {
-    params: { id: string };
-}
-
-export default function TaskPage({ params }: PageProps) {
-    return <ViewTaskPage taskId={params.id} />;
+export default async function TaskPage({
+    params,
+}: {
+    params: Promise<{ id: string }>
+}) {
+    const id = (await params).id
+    return <ViewTaskPage taskId={id} />;
 }

@@ -11,10 +11,9 @@ import Button from "@/components/ui/button";
 import { taskSchema } from "@/schema/taskSchema";
 
 
-
 type TaskFormData = z.infer<typeof taskSchema>;
 
-export default function EditTaskForm({ taskId }: { taskId: string }) {
+export default function EditTask({ taskId }: { taskId: string }) {
     const [loading, setLoading] = useState(true);
     const [taskNotFound, setTaskNotFound] = useState(false);
     const [apiError, setApiError] = useState("");

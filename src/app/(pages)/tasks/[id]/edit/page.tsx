@@ -1,6 +1,10 @@
 import EditTask from "@/components/Task/EditTask/EditTask";
 
-export default function EditTaskPage({ params }: { params: { id: string } }) {
-    console.log('[aram]', params);
-    return <EditTask taskId={params.id} />;
+export default async function Page({
+    params,
+}: {
+    params: Promise<{ id: string }>
+}) {
+    const id = (await params).id
+    return <EditTask taskId={id} />;
 }

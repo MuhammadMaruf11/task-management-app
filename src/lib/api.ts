@@ -31,7 +31,7 @@ export const updateTask = async (
   updates: Partial<Task>
 ): Promise<Task> => {
   const res = await fetch(`${BASE_URL}/${id}`, {
-    method: "PATCH",
+    method: "PUT",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(updates),
   });

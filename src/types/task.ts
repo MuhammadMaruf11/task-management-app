@@ -4,5 +4,5 @@ export interface Task {
   title: string;
   description: string;
   due_date: string;
-  status: "pending" | "completed" | "in-progress";
+  status: "pending" | "completed";
 }

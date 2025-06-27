@@ -14,7 +14,7 @@ export default function ThemeToggle() {
     if (!mounted) return null; // 👈 prevents hydration mismatch
 
     return (
-        <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+        <button className="text-2xl" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
             {theme === "dark" ? "🌞" : "🌙"}
         </button>
     );

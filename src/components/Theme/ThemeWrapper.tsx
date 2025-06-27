@@ -3,6 +3,7 @@
 
 import { ThemeProvider } from "next-themes";
 import { ReactNode, useEffect, useState } from "react";
+import Header from "../common/Header";
 
 export default function ThemeWrapper({ children }: { children: ReactNode }) {
     const [mounted, setMounted] = useState(false);
@@ -15,6 +16,7 @@ export default function ThemeWrapper({ children }: { children: ReactNode }) {
 
     return (
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
             {children}
         </ThemeProvider>
     );
